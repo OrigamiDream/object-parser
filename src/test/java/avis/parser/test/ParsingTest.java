@@ -19,6 +19,7 @@ public class ParsingTest {
         assertEquals(new BigInteger("100"), ReturnTypeParser.parseTo(BigInteger.class, "100"));
         assertEquals(new BigDecimal("27.874"), ReturnTypeParser.parseTo(BigDecimal.class, 27.874));
         assertEquals(new BigDecimal("27.874"), ReturnTypeParser.parseTo(BigDecimal.class, "27.874"));
+        assertEquals(62.4d, ReturnTypeParser.parseTo(double.class, new BigDecimal("62.4")), 0);
         assertEquals(false, ReturnTypeParser.parseTo(Boolean.class, "false"));
         assertEquals(true, ReturnTypeParser.parseTo(boolean.class, "true"));
         assertEquals((long) 25, (long) ReturnTypeParser.parseTo(Integer.class, 25));
